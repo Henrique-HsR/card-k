@@ -2,26 +2,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Baloo 2', cursive;
 }
 
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+}
 
-div{
+.card {
     background-color: #FFADE7;
     color: #0C1D31;
     font-size: 1.5rem;
     font-weight: bold;
-    max-width: 400px;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    position: static;
-    text-align: center;
 }
-
 
 .btn {
     display: flex;
@@ -50,4 +66,13 @@ a {
 
 .btn:hover {
     background: #0c1d31e3;
+}
+
+
+@media only screen and (max-width: 380px) {
+    .card {
+        font-size: 1.2rem;
+        font-weight: bold;
+    
+    }
 }
