@@ -9,40 +9,52 @@
 
 body {
     font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    background-color: rgba(255, 173, 231, 0.2);
 }
 
 .container{
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .container-card {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 360px;
-    height: 360px;
-    padding: 20px;
-    margin: auto;
+    min-width: 280px;
+    max-width: 300px;
+    background-color: #FFADE7;
+    color: #0C1D31;
     border-radius: 10px;
     text-align: center;
 }
 
 .card {
-    background-color: #FFADE7;
-    color: #0C1D31;
-    font-size: 1.5rem;
-    font-weight: bold;
+    width: 94%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1.inicial {
+    font-size: 2.6em;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .btn {
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
+    width: 180px;
     padding: 10px;
     margin: auto;
     margin-bottom: 20px;
@@ -69,10 +81,41 @@ a {
 }
 
 
-@media only screen and (max-width: 380px) {
-    .card {
-        font-size: 1.2rem;
-        font-weight: bold;
+@media only screen and (min-width: 380px) and (max-width: 420px) {
+    .container-card {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 768px) {
+    .container-card {
+        min-width: 380px;
+    }
+    .card{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container-card {
+        min-width: 600px;
+        max-width: 700px;
+    }
     
+    .card {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h1.inicial {
+        font-size: 3.2em;
+    }
+    
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 }
